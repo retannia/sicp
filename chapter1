@@ -69,4 +69,13 @@
         product
         (fact-iter (+ counter 1)(* product counter))))
   (fact-iter 1 1))
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#1.12 Pascal Triangle (I thought that i did by myself but actually no, 'coz I am too silly to do this by myself
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+(define (pascal order row)
+  (if (or (= row 1) (= order row)(= order 1))
+      1
+      (+ (pascal (- order 1) (- row 1))
+         (pascal  order (- row 1)))))
+
 
